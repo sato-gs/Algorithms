@@ -8,9 +8,9 @@
         public static List<int> Execute(int[] items)
         {
             var result = new List<int>();
-
             void helper(Stack<int> stack)
             {
+                // Define a base condition
                 if (stack.Count() == 0)
                 {
                     return;
@@ -22,6 +22,7 @@
                     result.Add(item);
                 }
 
+                // Define a recursion condition
                 helper(stack);
             }
 

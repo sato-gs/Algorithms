@@ -4,14 +4,19 @@
     {
         public static int Search(int[] items, int target)
         {
+            // Iterate over the array starting with the first item
             for (var i = 0; i < items.Length; i++)
             {
+                // If they match, return the position of the item
                 if (items[i] == target)
                 {
                     return i;
                 }
+
+                // If they do not match, continue the search with the next item
             }
 
+            // Return -1 if the target item does not exist
             return -1;
         }
     }

@@ -18,6 +18,7 @@
             return items;
         }
 
+        // Define the helper function to swap items
         public static void Swap(int[] items, int index1, int index2)
         {
             var temp = items[index1];

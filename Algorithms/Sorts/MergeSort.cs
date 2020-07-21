@@ -42,7 +42,7 @@
             {
                 if (leftIndex < left.Length && rightIndex < right.Length)
                 {
-                    if (left[leftIndex] < right[rightIndex])
+                    if (left[leftIndex] <= right[rightIndex])
                     {
                         result[leftIndex + rightIndex] = left[leftIndex];
                         leftIndex++;

@@ -21,7 +21,7 @@
                 }
 
                 // If the minimum item has changed from the first item
-                // swap it to the beginning of the unsorted items
+                // swap it with the beginning of the unsorted items
                 if (i != min)
                 {
                     Swap(items, i, min);

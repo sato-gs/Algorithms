@@ -10,7 +10,7 @@
                 return item;
             }
 
-            // Define a recursion condition
+            // Define a recursive condition
             return item * Execute(item - 1);
         }
     }

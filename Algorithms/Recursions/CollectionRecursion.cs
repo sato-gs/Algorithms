@@ -22,7 +22,7 @@
                     result.Add(item);
                 }
 
-                // Define a recursion condition
+                // Define a recursive condition
                 helper(stack);
             }
 

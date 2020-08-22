@@ -4,12 +4,12 @@
     {
         public static int[] Sort(int[] items)
         {
-            // Define the first index of the unsorted items to which the minimum item can be pushed
+            // Start at 0 (as unsorted items (on the right side))
             for (var i = 0; i < items.Length; i++)
             {
-                // Pick the first item of the unsorted items as minimum
+                // Select the first item of unsorted items as minimum
                 var min = i;
-                // Iterate over all unsorted items
+                // Iterate over unsorted items
                 for (var j = i + 1; j < items.Length; j++)
                 {
                     // If the current item is less than the current minimum item
@@ -20,8 +20,8 @@
                     }
                 }
 
-                // If the minimum item has changed from the first item
-                // swap it with the beginning of the unsorted items
+                // If the minimum item has changed
+                // swap it with the beginning of unsorted items
                 if (i != min)
                 {
                     Swap(items, i, min);

@@ -4,13 +4,13 @@
     {
         public static int[] Sort(int[] items)
         {
-            // Define the last index until which comparing & swapping continue
+            // Iterate for items - 1 times
             for (var i = items.Length - 1; i > 0; i--)
             {
-                // Define the flag to check whether or not swap has happened
+                // Define the flag to check whether or not swap has been made
                 var swap = false;
 
-                // Iterate over items starting with the first item until the item at the last index - 1
+                // Iterate over non bubbled up items
                 for (var j = 0; j < i; j++)
                 {
                     // If adjacent items are in the wrong order
@@ -22,7 +22,7 @@
                     }
                 }
 
-                // Break out of the iteration if no swap has happened (meaning that the list is sorted)
+                // Break out of the iteration if no swap has been made (meaning that items have been sorted)
                 if (!swap)
                 {
                     break;

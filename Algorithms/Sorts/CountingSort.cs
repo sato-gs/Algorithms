@@ -1,14 +1,12 @@
 ﻿namespace Algorithms.Sorts
 {
-    using System.Linq;
-
     public static class CountingSort
     {
         public static int[] Sort(int[] items)
         {
-            // Work out minimum and maximum items
-            var min = items.FirstOrDefault();
-            var max = items.FirstOrDefault();
+            // Work out minimum and maximum numbers
+            var min = items[0];
+            var max = items[0];
             for (var i = 0; i < items.Length; i++)
             {
                 if (min > items[i])
@@ -21,14 +19,14 @@
                 }
             }
 
-            // Count the number of times each item appears in the range of min - max
+            // Count the number of times each number appears in the range of min - max
             var count = new int[max - min + 1];
             for (var j = 0; j < items.Length; j++)
             {
                 count[items[j] - min]++;
             }
 
-            // Sort items based on the count array
+            // Sort numbers based on the count array
             var counter = 0;
             for (var k = min; k <= max; k++)
             {

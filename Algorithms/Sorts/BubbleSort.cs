@@ -14,7 +14,7 @@
                 for (var j = 0; j < i; j++)
                 {
                     // If adjacent items are in the wrong order
-                    // swap them and set the flag to true
+                    // Swap them and set the flag to true
                     if (items[j] > items[j + 1])
                     {
                         Swap(items, j, j + 1);
@@ -22,7 +22,8 @@
                     }
                 }
 
-                // Break out of the iteration if no swap has been made (meaning that items have been sorted)
+                // If no swap has been made (meaning that items have been sorted)
+                // Break out of the iteration
                 if (!swap)
                 {
                     break;

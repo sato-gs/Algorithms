@@ -4,7 +4,7 @@
     {
         public static int Search(int[] items, int target)
         {
-            // Iterate over the array starting with the first item
+            // Iterate over items starting with the first item
             for (var i = 0; i < items.Length; i++)
             {
                 // If they match, return the position of the item
@@ -13,7 +13,8 @@
                     return i;
                 }
 
-                // If they do not match, continue the search with the next item
+                // If they do not match
+                // Continue the search with the next item
             }
 
             // Return -1 if the target item does not exist

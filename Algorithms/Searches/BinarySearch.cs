@@ -19,13 +19,13 @@
                     return middle;
                 }
                 // If the target item is less than the middle most item
-                // continue the search with the lower half of the list
+                // Continue the search with the lower half of the list
                 else if (target < items[middle])
                 {
                     high = middle - 1;
                 }
                 // If the target item is greater than the middle most item
-                // continue the search with the upper half of the list
+                // Continue the search with the upper half of the list
                 else
                 {
                     low = middle + 1;

@@ -13,7 +13,7 @@
                 for (var j = i + 1; j < items.Length; j++)
                 {
                     // If the current item is less than the current minimum item
-                    // keep track of it
+                    // Keep track of it
                     if (items[j] < items[min])
                     {
                         min = j;
@@ -21,7 +21,7 @@
                 }
 
                 // If the minimum item has changed
-                // swap it with the beginning of unsorted items
+                // Swap it with the beginning of unsorted items
                 if (i != min)
                 {
                     Swap(items, i, min);

@@ -15,32 +15,30 @@
                 buckets[i] = new List<int>();
             }
 
-            // Distribute each item into a bucket based on its hash value
+            // Distribute each item into buckets based on its hash value
             for (var j = 0; j < items.Length; j++)
             {
                 buckets[Hash(items[j])].Add(items[j]);
             }
 
-            // Sort items in each (non-empty) bucket
+            // Sort items in each bucket
             foreach (var bucket in buckets)
             {
-                // Sort() (in List) uses quick sort in C#
+                // Sort() in List uses quick sort in C#
                 bucket.Sort();
             }
 
-            // Visit sorted buckets in order and concatenate them into one
+            // Visit buckets in order and concatenate them into one
             var index = 0;
-            var sortedItems = new int[items.Length];
-            for (var k = 0; k < buckets.Length; k++)
+            foreach (var bucket in buckets)
             {
-                foreach (var item in buckets[k])
+                foreach (var item in bucket)
                 {
-                    sortedItems[index] = item;
-                    index++;
+                    items[index++] = item;
                 }
             }
 
-            return sortedItems;
+            return items;
         }
 
         // Define the helper function to generate hash for each item (only workable between 0 - 99)

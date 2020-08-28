@@ -7,7 +7,7 @@
             // Work out minimum and maximum numbers
             var min = items[0];
             var max = items[0];
-            for (var i = 0; i < items.Length; i++)
+            for (var i = 1; i < items.Length; i++)
             {
                 if (min > items[i])
                 {

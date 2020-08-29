@@ -14,16 +14,16 @@
 
             // Get the left half of the list
             var left = new int[middle];
-            for (var i = 0; i < middle; i++)
+            for (var i = 0; i < left.Length; i++)
             {
                 left[i] = items[i];
             }
 
             // Get the right half of the list
             var right = new int[items.Length - middle];
-            for (var i = middle; i < items.Length; i++)
+            for (var i = 0; i < right.Length; i++)
             {
-                right[i - middle] = items[i];
+                right[i] = items[i + middle];
             }
 
             // Recursively split the list into halves until each sub-list contains only one element

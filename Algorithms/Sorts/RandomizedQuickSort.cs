@@ -20,7 +20,7 @@
             return items;
         }
 
-        // Define the helper function to re-order items according to whether items are less/greater than the pivot item
+        // Define the helper function to reorder items according to whether items are less/greater than the pivot item
         public static int ReOrder(int[] items, int low, int high)
         {
             // Randomize the pivot and place it at the beginning of the list

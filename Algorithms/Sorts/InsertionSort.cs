@@ -10,7 +10,7 @@
                 var cur = items[i];
                 int j;
                 // Compare the current item with sorted items (on the left side) backwards
-                // Keep shifting items smaller than the current item towards right
+                // Keep shifting items larger than the current item towards right
                 for (j = i; j > 0 && items[j - 1] > cur; j--)
                 {
                     items[j] = items[j - 1];
